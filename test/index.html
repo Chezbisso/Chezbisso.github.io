@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministère des Industries Minières et de la Géologie - Congo-Brazzaville</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #2c2416 0%, #4a3c24 50%, #7a613c 100%);
+        }
+        .mining-icon {
+            filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.7));
+        }
+        .form-section {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #f7ef8a 0%, #d4af37 50%, #b8941f 100%);
+        }
+        .gold-text {
+            color: #d4af37;
+        }
+        .dark-bg {
+            background-color: #1a1611;
+        }
+        .darker-bg {
+            background-color: #14110d;
+        }
+        .light-bg {
+            background-color: #f8f6f0;
+        }
+        .language-selector {
+            position: relative;
+            display: inline-block;
+        }
+        .language-dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 140px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .language-dropdown a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .language-dropdown a:hover {
+            background-color: #f1f1f1;
+        }
+        .language-selector:hover .language-dropdown {
+            display: block;
+        }
+        .carousel-slide {
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Styles pour les menus déroulants */
+        .group:hover .group-hover\:rotate-180 {
+            transform: rotate(180deg);
+        }
+        
+        .group:hover .group-hover\:visible {
+            visibility: visible;
+        }
+        
+        .group:hover .group-hover\:opacity-100 {
+            opacity: 1;
+        }
+        
+        /* Transition pour les dropdowns */
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        
+        /* Styles pour les dropdowns mobiles */
+        .mobile-dropdown-content {
+            transition: max-height 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+        <!-- Navigation -->
+<nav class="fixed w-full bg-white shadow-md z-50">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="http://127.0.0.1:5500/images/Coat_of_arms_of_the_Republic_of_the_Congo.svg" alt="Logo Ministère" class="h-12 mr-3">
+            <span class="text-xl font-bold gold-text" style="font-size: medium;">Ministre des Industries Minières et de la Géologie</span>
+        </div>
+        
+        <div class="hidden md:flex space-x-6 items-center">
+            <!-- Accueil -->
+            <a href="#accueil" class="text-gray-800 hover:gold-text font-medium px-3 py-2">Accueil</a>
+            
+            <!-- À propos -->
+            <a href="#apropos" class="text-gray-800 hover:gold-text font-medium px-3 py-2">À propos</a>
+            
+            <!-- Services et Procédures - Menu déroulant -->
+            <div class="relative group">
+                <button class="text-gray-800 hover:gold-text font-medium px-3 py-2 flex items-center focus:outline-none">
+                    Services et Procédures
+                    <i data-feather="chevron-down" class="ml-1 w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                </button>
+                <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-200">
+                    <div class="py-2">
+                        <a href="#services" class="block px-4 py-3 text-gray-800 hover:bg-amber-50 hover:gold-text border-b border-gray-100">
+                            <div class="flex items-center">
+                                <i data-feather="file-text" class="w-4 h-4 mr-3 gold-text"></i>
+                                <span>Services et Autorisations</span>
+                            </div>
+                        </a>
+                        <a href="#kimberley" class="block px-4 py-3 text-gray-800 hover:bg-amber-50 hover:gold-text border-b border-gray-100">
+                            <div class="flex items-center">
+                                <i data-feather="award" class="w-4 h-4 mr-3 gold-text"></i>
+                                <span>Processus Kimberley</span>
+                            </div>
+                        </a>
+                        <a href="#digitalisation" class="block px-4 py-3 text-gray-800 hover:bg-amber-50 hover:gold-text">
+                            <div class="flex items-center">
+                                <i data-feather="cloud" class="w-4 h-4 mr-3 gold-text"></i>
+                                <span>Digitalisation des Titres</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Projets et Données - Menu déroulant -->
+            <div class="relative group">
+                <button class="text-gray-800 hover:gold-text font-medium px-3 py-2 flex items-center focus:outline-none">
+                    Projets et Données
+                    <i data-feather="chevron-down" class="ml-1 w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                </button>
+                <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-200">
+                    <div class="py-2">
+                        <a href="#projets" class="block px-4 py-3 text-gray-800 hover:bg-amber-50 hover:gold-text border-b border-gray-100">
+                            <div class="flex items-center">
+                                <i data-feather="trending-up" class="w-4 h-4 mr-3 gold-text"></i>
+                                <span>Projets en Cours</span>
+                            </div>
+                        </a>
+                        <a href="#statistiques" class="block px-4 py-3 text-gray-800 hover:bg-amber-50 hover:gold-text border-b border-gray-100">
+                            <div class="flex items-center">
+                                <i data-feather="bar-chart-2" class="w-4 h-4 mr-3 gold-text"></i>
+                                <span>Statistiques Minières</span>
+                            </div>
+                        </a>
+                        <a href="#zones-exploitees" class="block px-4 py-3 text-gray-800 hover:bg-amber-50 hover:gold-text">
+                            <div class="flex items-center">
+                                <i data-feather="map" class="w-4 h-4 mr-3 gold-text"></i>
+                                <span>Cartographie Géo</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Partenaires -->
+            <a href="#partenaires" class="text-gray-800 hover:gold-text font-medium px-3 py-2">Partenaires</a>
+            
+            <!-- Médias et Actualités - Menu déroulant -->
+            <div class="relative group">
+                <button class="text-gray-800 hover:gold-text font-medium px-3 py-2 flex items-center focus:outline-none">
+                    Médias et Actualités
+                    <i data-feather="chevron-down" class="ml-1 w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                </button>
+                <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-200">
+                    <div class="py-2">
+                        <a href="#mediatheque" class="block px-4 py-3 text-gray-800 hover:bg-amber-50 hover:gold-text border-b border-gray-100">
+                            <div class="flex items-center">
+                                <i data-feather="database" class="w-4 h-4 mr-3 gold-text"></i>
+                                <span>Médiathèque</span>
+                            </div>
+                        </a>
+                        <a href="#seminaires" class="block px-4 py-3 text-gray-800 hover:bg-amber-50 hover:gold-text border-b border-gray-100">
+                            <div class="flex items-center">
+                                <i data-feather="calendar" class="w-4 h-4 mr-3 gold-text"></i>
+                                <span>Événements</span>
+                            </div>
+                        </a>
+                        <a href="#blog" class="block px-4 py-3 text-gray-800 hover:bg-amber-50 hover:gold-text">
+                            <div class="flex items-center">
+                                <i data-feather="file-text" class="w-4 h-4 mr-3 gold-text"></i>
+                                <span>Actualités et Blog</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact -->
+            <a href="#contact" class="text-gray-800 hover:gold-text font-medium px-3 py-2">Contact</a>
+            
+            <!-- Sélecteur de langue -->
+            <div class="language-selector ml-4">
+                <button class="gold-gradient text-gray-900 px-4 py-2 rounded-md hover:opacity-90 transition font-medium flex items-center">
+                    FR <i data-feather="chevron-down" class="ml-1 w-4 h-4"></i>
+                </button>
+                <div class="language-dropdown">
+                    <a href="#" class="flex items-center">
+                        <span class="mr-2">🇫🇷</span> Français
+                    </a>
+                    <a href="#" class="flex items-center">
+                        <span class="mr-2">🇬🇧</span> English
+                    </a>
+                    <a href="#" class="flex items-center">
+                        <span class="mr-2">🇨🇳</span> 中文
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+            <i data-feather="menu"></i>
+        </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="md:hidden hidden bg-white w-full px-6 py-3" id="mobile-menu">
+        <div class="flex flex-col space-y-4">
+            <a href="#accueil" class="text-gray-800 hover:gold-text py-2">Accueil</a>
+            <a href="#apropos" class="text-gray-800 hover:gold-text py-2">À propos</a>
+            
+            <!-- Mobile dropdown - Services et Procédures -->
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-toggle w-full flex justify-between items-center text-gray-800 hover:gold-text py-2 focus:outline-none">
+                    Services et Procédures
+                    <i data-feather="chevron-down" class="w-4 h-4 transform transition-transform"></i>
+                </button>
+                <div class="mobile-dropdown-content hidden pl-4 mt-2 space-y-2">
+                    <a href="#services" class="block text-gray-600 hover:gold-text py-1">Services et Autorisations</a>
+                    <a href="#kimberley" class="block text-gray-600 hover:gold-text py-1">Processus Kimberley</a>
+                    <a href="#digitalisation" class="block text-gray-600 hover:gold-text py-1">Digitalisation des Titres</a>
+                </div>
+            </div>
+            
+            <!-- Mobile dropdown - Projets et Données -->
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-toggle w-full flex justify-between items-center text-gray-800 hover:gold-text py-2 focus:outline-none">
+                    Projets et Données
+                    <i data-feather="chevron-down" class="w-4 h-4 transform transition-transform"></i>
+                </button>
+                <div class="mobile-dropdown-content hidden pl-4 mt-2 space-y-2">
+                    <a href="#projets" class="block text-gray-600 hover:gold-text py-1">Projets en Cours</a>
+                    <a href="#statistiques" class="block text-gray-600 hover:gold-text py-1">Statistiques Minières</a>
+                    <a href="#zones-exploitees" class="block text-gray-600 hover:gold-text py-1">Cartographie Géo</a>
+                </div>
+            </div>
+            
+            <a href="#partenaires" class="text-gray-800 hover:gold-text py-2">Partenaires</a>
+            
+            <!-- Mobile dropdown - Médias et Actualités -->
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-toggle w-full flex justify-between items-center text-gray-800 hover:gold-text py-2 focus:outline-none">
+                    Médias et Actualités
+                    <i data-feather="chevron-down" class="w-4 h-4 transform transition-transform"></i>
+                </button>
+                <div class="mobile-dropdown-content hidden pl-4 mt-2 space-y-2">
+                    <a href="#mediatheque" class="block text-gray-600 hover:gold-text py-1">Médiathèque</a>
+                    <a href="#seminaires" class="block text-gray-600 hover:gold-text py-1">Événements</a>
+                    <a href="#blog" class="block text-gray-600 hover:gold-text py-1">Actualités et Blog</a>
+                </div>
+            </div>
+            
+            <a href="#contact" class="text-gray-800 hover:gold-text py-2">Contact</a>
+            
+            <div class="pt-2 border-t border-gray-200">
+                <p class="text-sm font-medium text-gray-500 mb-2">Langue / Language</p>
+                <div class="flex space-x-2">
+                    <button class="gold-gradient text-gray-900 px-3 py-1 rounded text-sm font-medium">FR</button>
+                    <button class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm font-medium">EN</button>
+                    <button class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm font-medium">中文</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section avec Carrousel Dynamique -->
+    <section id="accueil" class="hero-gradient pt-32 pb-20 text-white relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <!-- Carrousel d'images/vidéos -->
+            <div id="headerCarousel" class="h-full w-full">
+                <!-- Slide 1 -->
+                <div class="carousel-slide absolute inset-0 opacity-40 transition-opacity duration-1000">
+                    <img src="http://static.photos/office/640x360/1" alt="Ministère" class="w-full h-full object-cover">
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-slide absolute inset-0 opacity-40 transition-opacity duration-1000 hidden">
+                    <img src="http://static.photos/industry/640x360/2" alt="Activités minières" class="w-full h-full object-cover">
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-slide absolute inset-0 opacity-40 transition-opacity duration-1000 hidden">
+                    <img src="http://static.photos/construction/640x360/3" alt="Projets miniers" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Développement durable des ressources minières du Congo</h1>
+                    <p class="text-xl mb-8">Promouvoir une exploitation minière responsable au service du développement économique national.</p>
+                    <div class="flex space-x-4">
+                        <a href="#services" class="gold-gradient text-gray-900 font-bold py-3 px-6 rounded-lg transition hover:opacity-90">Demandes en ligne</a>
+                        <a href="#projets" class="border-2 border-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg transition">Projets en cours</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                    <div class="relative w-full max-w-2xl bg-black bg-opacity-50 rounded-lg p-4">
+                        <h3 class="text-white text-xl font-bold mb-4">Activités récentes du Ministre</h3>
+                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                            <iframe 
+                                class="w-full h-64 md:h-80 lg:h-96 rounded-lg"
+                                src="https://www.youtube.com/embed/rg9k-a3X0vY?si=1gOkF2GLobbHOdr7?rel=0&modestbranding=1&autohide=1&showinfo=0" 
+                                title="Activités du Ministre"
+                                frameborder="0" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contrôles du carrousel -->
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
+            <button class="carousel-indicator w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition" data-slide="0"></button>
+            <button class="carousel-indicator w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition" data-slide="1"></button>
+            <button class="carousel-indicator w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition" data-slide="2"></button>
+        </div>
+    </section>
+
+    <!-- Minister's Message -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center bg-gray-100 rounded-xl overflow-hidden shadow-lg">
+                <div class="md:w-1/3">
+                    <img src="images/pierre-Oba.jpg" alt="Ministre" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-8" data-aos="fade-up">
+                    <h2 class="text-3xl font-bold gold-text mb-6">Message du Ministre</h2>
+                    <p class="text-gray-700 mb-4">"Le secteur minier constitue un pilier essentiel de notre économie nationale. Notre ministère s'engage à promouvoir une exploitation responsable et durable de nos ressources minières, au bénéfice de tous les Congolais."</p>
+                    <p class="text-gray-700 mb-6">Nous modernisons nos services pour faciliter les démarches des artisans, coopératives et investisseurs, tout en veillant au respect de nos réglementations et à la protection de notre environnement.</p>
+                    <div class="flex items-center">
+                        <div class="h-1 gold-gradient w-16 mr-4"></div>
+                        <span class="font-bold gold-text">Ministre des Industries Minières et de la Géologie</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="py-16 light-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center gold-text mb-16" data-aos="fade-up">À propos du Ministère</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-amber-50 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="book" class="gold-text w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 gold-text">Histoire</h3>
+                    <p class="text-gray-600">Créé en 1960, notre ministère a accompagné l'évolution du secteur minier congolais, contribuant au développement économique du pays.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-amber-50 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="target" class="gold-text w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 gold-text">Missions</h3>
+                    <p class="text-gray-600">Élaboration de la politique minière, réglementation du secteur, promotion des investissements et contrôle des activités minières.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-amber-50 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="users" class="gold-text w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 gold-text">Organisation</h3>
+                    <p class="text-gray-600">Direction générale, directions techniques spécialisées et services déconcentrés dans les régions minières du pays.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center gold-text mb-4" data-aos="fade-up">Services et Autorisations Minières</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto" data-aos="fade-up">Démarches simplifiées pour l'obtention des titres et autorisations minières</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-amber-800 flex items-center justify-center">
+                        <i data-feather="tool" class="text-white w-16 h-16"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 gold-text">Exploitation Artisanale</h3>
+                        <p class="text-gray-600 mb-4">Autorisation pour les artisans miniers individuels et les coopératives.</p>
+                        <button onclick="openModal('artisanale')" class="gold-text font-medium hover:text-amber-700 flex items-center">
+                            Faire une demande <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-amber-700 flex items-center justify-center">
+                        <i data-feather="layers" class="text-white w-16 h-16"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 gold-text">Autorisation de Carrière</h3>
+                        <p class="text-gray-600 mb-4">Pour l'exploitation des matériaux de construction et substances utiles.</p>
+                        <button onclick="openModal('carriere')" class="gold-text font-medium hover:text-amber-700 flex items-center">
+                            Faire une demande <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-amber-600 flex items-center justify-center">
+                        <i data-feather="search" class="text-white w-16 h-16"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 gold-text">Permis de Recherche</h3>
+                        <p class="text-gray-600 mb-4">Pour la prospection et la recherche de substances minières.</p>
+                        <button onclick="openModal('recherche')" class="gold-text font-medium hover:text-amber-700 flex items-center">
+                            Faire une demande <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-amber-500 flex items-center justify-center">
+                        <i data-feather="compass" class="text-white w-16 h-16"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 gold-text">Petite Mine</h3>
+                        <p class="text-gray-600 mb-4">Permis d'exploitation pour les petites opérations minières.</p>
+                        <button onclick="openModal('petite-mine')" class="gold-text font-medium hover:text-amber-700 flex items-center">
+                            Faire une demande <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-amber-400 flex items-center justify-center">
+                        <i data-feather="activity" class="text-white w-16 h-16"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 gold-text">Exploitation Industrielle</h3>
+                        <p class="text-gray-600 mb-4">Permis pour les grandes opérations minières industrielles.</p>
+                        <button onclick="openModal('industrielle')" class="gold-text font-medium hover:text-amber-700 flex items-center">
+                            Faire une demande <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-amber-300 flex items-center justify-center">
+                        <i data-feather="star" class="text-white w-16 h-16"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 gold-text">Autorisation Spéciale</h3>
+                        <p class="text-gray-600 mb-4">Pour les cas particuliers et projets spéciaux.</p>
+                        <button onclick="openModal('speciale')" class="gold-text font-medium hover:text-amber-700 flex items-center">
+                            Faire une demande <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Processus de Kimberley Section -->
+    <section id="kimberley" class="py-16 light-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center gold-text mb-4" data-aos="fade-up">Processus de Kimberley</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto" data-aos="fade-up">Certification des diamants bruts pour prévenir le commerce des diamants de conflit</p>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold gold-text mb-6">Certificats et Autorisations</h3>
+                    <p class="text-gray-600 mb-6">Le Processus de Kimberley est un système international de certification qui régule le commerce des diamants bruts pour empêcher que les diamants de conflit ne financent des guerres.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-2 rounded-full mr-4">
+                                <i data-feather="file-text" class="gold-text w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold gold-text">Certificat Kimberley</h4>
+                                <p class="text-gray-600">Document obligatoire pour l'exportation de diamants bruts</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-2 rounded-full mr-4">
+                                <i data-feather="shield" class="gold-text w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold gold-text">Autorisation d'Exportation</h4>
+                                <p class="text-gray-600">Délivrée après vérification de la conformité des diamants</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <button class="gold-gradient text-gray-900 font-bold py-3 px-6 rounded-lg transition hover:opacity-90">
+                            Télécharger les formulaires
+                        </button>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <h4 class="text-xl font-bold gold-text mb-4">Documents disponibles</h4>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center p-4 border border-gray-200 rounded-lg">
+                                <div>
+                                    <h5 class="font-bold">Guide du Processus de Kimberley</h5>
+                                    <p class="text-sm text-gray-600">PDF - 1.2 MB</p>
+                                </div>
+                                <button class="gold-text hover:text-amber-700">
+                                    <i data-feather="download" class="w-5 h-5"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="flex justify-between items-center p-4 border border-gray-200 rounded-lg">
+                                <div>
+                                    <h5 class="font-bold">Formulaire de demande de certificat</h5>
+                                    <p class="text-sm text-gray-600">PDF - 0.8 MB</p>
+                                </div>
+                                <button class="gold-text hover:text-amber-700">
+                                    <i data-feather="download" class="w-5 h-5"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="flex justify-between items-center p-4 border border-gray-200 rounded-lg">
+                                <div>
+                                    <h5 class="font-bold">Règlementation nationale PK</h5>
+                                    <p class="text-sm text-gray-600">PDF - 2.1 MB</p>
+                                </div>
+                                <button class="gold-text hover:text-amber-700">
+                                    <i data-feather="download" class="w-5 h-5"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digitalisation des Titres Miniers Section -->
+    <section id="digitalisation" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center gold-text mb-4" data-aos="fade-up">Digitalisation des Titres Miniers</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto" data-aos="fade-up">Modernisation du système de gestion et délivrance des titres miniers</p>
+            
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold gold-text mb-6">Plateforme de Gestion Numérique</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i data-feather="check-circle" class="text-green-600 w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold gold-text mb-1">Dépôt en ligne des demandes</h4>
+                                    <p class="text-gray-600">Soumettez vos demandes de titres miniers 24h/24 depuis n'importe où</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i data-feather="check-circle" class="text-green-600 w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold gold-text mb-1">Suivi en temps réel</h4>
+                                    <p class="text-gray-600">Consultez l'état d'avancement de votre dossier en temps réel</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i data-feather="check-circle" class="text-green-600 w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold gold-text mb-1">Paiement électronique</h4>
+                                    <p class="text-gray-600">Effectuez vos paiements en ligne de manière sécurisée</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i data-feather="clock" class="text-blue-600 w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold gold-text mb-1">Titres dématérialisés</h4>
+                                    <p class="text-gray-600">Recevez vos titres miniers sous format numérique certifié</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 flex flex-wrap gap-4">
+                            <button class="gold-gradient text-gray-900 font-bold py-3 px-6 rounded-lg transition hover:opacity-90">
+                                Accéder à la plateforme
+                            </button>
+                            <button class="border-2 border-amber-500 gold-text hover:gold-gradient hover:text-gray-900 font-bold py-3 px-6 rounded-lg transition">
+                                Guide d'utilisation
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <div class="bg-gray-800 rounded-xl p-8 text-white">
+                        <h3 class="text-2xl font-bold text-amber-400 mb-6">Avantages de la Digitalisation</h3>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center">
+                                <div class="bg-amber-500 w-8 h-8 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold">1</span>
+                                </div>
+                                <span>Réduction des délais de traitement de 60%</span>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="bg-amber-500 w-8 h-8 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold">2</span>
+                                </div>
+                                <span>Transparence totale du processus</span>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="bg-amber-500 w-8 h-8 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold">3</span>
+                                </div>
+                                <span>Élimination des déplacements inutiles</span>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="bg-amber-500 w-8 h-8 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold">4</span>
+                                </div>
+                                <span>Archivage sécurisé des documents</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-amber-900 rounded-lg p-6">
+                            <h4 class="font-bold text-amber-400 mb-3">Prochaines étapes</h4>
+                            <ul class="space-y-2 text-amber-200">
+                                <li>• Intégration du système de géolocalisation des titres</li>
+                                <li>• Mise en place de la signature électronique avancée</li>
+                                <li>• Interconnexion avec les autres administrations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projets" class="py-16 light-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center gold-text mb-4" data-aos="fade-up">Projets en Cours d'Investissement</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto" data-aos="fade-up">Découvrez les grands projets miniers en cours et les opportunités d'affaires</p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-right">
+                    <img src="http://static.photos/construction/640x360/1" alt="Projet Potasse" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-amber-100 text-amber-800 text-sm font-medium px-3 py-1 rounded-full">En cours</span>
+                            <span class="text-gray-500">Kouilou</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 gold-text">Projet Potasse de Kouilou</h3>
+                        <p class="text-gray-600 mb-4">Développement d'un complexe minier pour l'extraction et la transformation de potasse, avec une capacité de production de 2 millions de tonnes par an.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="gold-text font-bold">Investissement: $1.5 milliard</span>
+                            <button class="gold-text font-medium hover:text-amber-700 flex items-center">
+                                En savoir plus <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-left">
+                    <img src="http://static.photos/industry/640x360/2" alt="Projet Fer" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Nouveau</span>
+                            <span class="text-gray-500">Sangha</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 gold-text">Gisement de Fer de Nabeba</h3>
+                        <p class="text-gray-600 mb-4">Exploitation du gisement de fer de classe mondiale avec des réserves estimées à plus de 600 millions de tonnes de minerai à haute teneur.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="gold-text font-bold">Investissement: $900 millions</span>
+                            <button class="gold-text font-medium hover:text-amber-700 flex items-center">
+                                En savoir plus <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center" data-aos="fade-up">
+                <button class="gold-gradient text-gray-900 font-bold py-3 px-8 rounded-lg transition hover:opacity-90 flex items-center mx-auto">
+                    Voir tous les projets <i data-feather="chevron-down" class="ml-2 w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistiques Section -->
+    <section id="statistiques" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center gold-text mb-4" data-aos="fade-up">Statistiques Minières</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto" data-aos="fade-up">Données et indicateurs du secteur minier congolais</p>
+            
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gold-gradient w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="trending-up" class="text-gray-900 w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold gold-text mb-2">15.8%</h3>
+                    <p class="text-gray-600">Contribution au PIB national</p>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gold-gradient w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="dollar-sign" class="text-gray-900 w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold gold-text mb-2">$2.3M</h3>
+                    <p class="text-gray-600">Investissements directs 2023</p>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="gold-gradient w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="users" class="text-gray-900 w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold gold-text mb-2">12,450</h3>
+                    <p class="text-gray-600">Emplois directs générés</p>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="gold-gradient w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="package" class="text-gray-900 w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold gold-text mb-2">156</h3>
+                    <p class="text-gray-600">Titres miniers actifs</p>
+                </div>
+            </div>
+            
+            <div class="bg-gray-100 rounded-xl p-8" data-aos="fade-up">
+                <h3 class="text-2xl font-bold gold-text mb-6 text-center">Rapports Statistiques Annuels</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg p-6 text-center">
+                        <i data-feather="bar-chart-2" class="gold-text w-12 h-12 mx-auto mb-4"></i>
+                        <h4 class="font-bold gold-text mb-2">Production 2023</h4>
+                        <p class="text-gray-600 text-sm mb-4">Chiffres détaillés de production par minerai</p>
+                        <button class="gold-text text-sm font-medium">Télécharger</button>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 text-center">
+                        <i data-feather="pie-chart" class="gold-text w-12 h-12 mx-auto mb-4"></i>
+                        <h4 class="font-bold gold-text mb-2">Exportations</h4>
+                        <p class="text-gray-600 text-sm mb-4">Données d'exportation par destination</p>
+                        <button class="gold-text text-sm font-medium">Télécharger</button>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 text-center">
+                        <i data-feather="activity" class="gold-text w-12 h-12 mx-auto mb-4"></i>
+                        <h4 class="font-bold gold-text mb-2">Indicateurs 2023</h4>
+                        <p class="text-gray-600 text-sm mb-4">Tableaux de bord complets</p>
+                        <button class="gold-text text-sm font-medium">Télécharger</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zones Exploitées Section -->
+    <section id="zones-exploitees" class="py-16 light-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center gold-text mb-4" data-aos="fade-up">Zones Minières Exploitées</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto" data-aos="fade-up">Cartographie des principales zones d'exploitation minière au Congo-Brazzaville</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Zone 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-amber-800 relative">
+                        <img src="http://static.photos/map/640x360/1" alt="Zone Kouilou" class="w-full h-full object-cover opacity-80">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i data-feather="map-pin" class="text-white w-12 h-12"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 gold-text">Zone de Kouilou</h3>
+                        <p class="text-gray-600 mb-4">Principale région d'exploitation de potasse et autres minéraux industriels.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-amber-100 text-amber-800 text-sm font-medium px-3 py-1 rounded-full">Potasse</span>
+                            <span class="text-gray-500">Active</span>
+                        </div>
+                        <button class="gold-text font-medium hover:text-amber-700 flex items-center">
+                            Voir détails <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Zone 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-amber-700 relative">
+                        <img src="http://static.photos/map/640x360/2" alt="Zone Sangha" class="w-full h-full object-cover opacity-80">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i data-feather="map-pin" class="text-white w-12 h-12"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 gold-text">Zone de Sangha</h3>
+                        <p class="text-gray-600 mb-4">Région riche en gisements de fer, or et diamants alluvionnaires.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-amber-100 text-amber-800 text-sm font-medium px-3 py-1 rounded-full">Fer, Or</span>
+                            <span class="text-gray-500">Active</span>
+                        </div>
+                        <button class="gold-text font-medium hover:text-amber-700 flex items-center">
+                            Voir détails <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Zone 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-amber-600 relative">
+                        <img src="http://static.photos/map/640x360/3" alt="Zone Niari" class="w-full h-full object-cover opacity-80">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i data-feather="map-pin" class="text-white w-12 h-12"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 gold-text">Zone de Niari</h3>
+                        <p class="text-gray-600 mb-4">Exploitation de plomb, zinc et autres métaux de base.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-amber-100 text-amber-800 text-sm font-medium px-3 py-1 rounded-full">Plomb, Zinc</span>
+                            <span class="text-gray-500">En développement</span>
+                        </div>
+                        <button class="gold-text font-medium hover:text-amber-700 flex items-center">
+                            Voir détails <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-100 rounded-xl p-8" data-aos="fade-up">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 mb-6 md:mb-0 flex justify-center">
+                        <img src="http://static.photos/map/640x360/4" alt="Carte des zones minières" class="rounded-lg shadow-md">
+                    </div>
+                    <div class="md:w-2/3 md:pl-8">
+                        <h3 class="text-2xl font-bold gold-text mb-4">Carte Interactive des Zones Minières</h3>
+                        <p class="text-gray-600 mb-6">Notre carte interactive vous permet d'explorer les différentes zones minières du Congo-Brazzaville, avec des informations détaillées sur les types de minerais exploités, les entreprises opérant dans chaque zone et les réglementations spécifiques.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-amber-500 text-white text-sm font-medium px-3 py-1 rounded-full">Potasse</span>
+                            <span class="bg-yellow-500 text-white text-sm font-medium px-3 py-1 rounded-full">Or</span>
+                            <span class="bg-gray-600 text-white text-sm font-medium px-3 py-1 rounded-full">Fer</span>
+                            <span class="bg-green-500 text-white text-sm font-medium px-3 py-1 rounded-full">Diamants</span>
+                            <span class="bg-red-500 text-white text-sm font-medium px-3 py-1 rounded-full">Plomb</span>
+                            <span class="bg-purple-500 text-white text-sm font-medium px-3 py-1 rounded-full">Zinc</span>
+                        </div>
+                        <a href="mapszone.html">
+                        <button class="gold-gradient text-gray-900 font-bold py-3 px-6 rounded-lg transition hover:opacity-90 flex items-center">
+                            Accéder à la carte interactive <i data-feather="map" class="ml-2 w-5 h-5"></i>
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partenaires Section -->
+    <section id="partenaires" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center gold-text mb-4" data-aos="fade-up">Nos Partenaires</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto" data-aos="fade-up">Collaborations stratégiques pour le développement du secteur minier congolais</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Partenaire 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-24 h-24 bg-amber-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="globe" class="gold-text w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-lg font-bold gold-text mb-2 text-center">Banque Mondiale</h3>
+                    <p class="text-gray-600 text-center text-sm">Soutien au développement des infrastructures minières et renforcement des capacités institutionnelles.</p>
+                </div>
+                
+                <!-- Partenaire 2 -->
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-24 h-24 bg-amber-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="briefcase" class="gold-text w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-lg font-bold gold-text mb-2 text-center">Société Minière Internationale</h3>
+                    <p class="text-gray-600 text-center text-sm">Expertise technique et investissements dans l'exploration et l'exploitation minière.</p>
+                </div>
+                
+                <!-- Partenaire 3 -->
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-24 h-24 bg-amber-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="award" class="gold-text w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-lg font-bold gold-text mb-2 text-center">ONG Environnementale</h3>
+                    <p class="text-gray-600 text-center text-sm">Collaboration pour des pratiques minières responsables et respectueuses de l'environnement.</p>
+                </div>
+                
+                <!-- Partenaire 4 -->
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-24 h-24 bg-amber-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="trending-up" class="gold-text w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-lg font-bold gold-text mb-2 text-center">Université des Mines</h3>
+                    <p class="text-gray-600 text-center text-sm">Formation des cadres et recherche appliquée dans le domaine des sciences géologiques.</p>
+                </div>
+            </div>
+            
+            <div class="text-center" data-aos="fade-up">
+                <button class="border-2 border-amber-500 gold-text hover:gold-gradient hover:text-gray-900 font-bold py-3 px-8 rounded-lg transition">
+                    Devenir Partenaire
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Médiathèque Section -->
+    <section id="mediatheque" class="py-16 light-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center gold-text mb-4" data-aos="fade-up">Médiathèque</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto" data-aos="fade-up">Ressources documentaires, publications et supports multimédias sur le secteur minier</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Rapport Annuel 2022 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-amber-800 flex items-center justify-center relative">
+                        <i data-feather="file-text" class="text-white w-16 h-16"></i>
+                        <span class="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">Nouveau</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 gold-text">Rapport Annuel 2022</h3>
+                        <p class="text-gray-600 mb-4">Bilan complet des activités minières, statistiques de production et perspectives pour l'année à venir.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">PDF - 2.4 MB</span>
+                            <button class="gold-text font-medium hover:text-amber-700 flex items-center">
+                                Télécharger <i data-feather="download" class="ml-2 w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rapports ITIE -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-amber-700 flex items-center justify-center">
+                        <i data-feather="award" class="text-white w-16 h-16"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 gold-text">Rapports ITIE</h3>
+                        <p class="text-gray-600 mb-4">Documents de transparence dans la gestion des revenus des industries extractives.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Multiples PDF</span>
+                            <button class="gold-text font-medium hover:text-amber-700 flex items-center">
+                                Consulter <i data-feather="external-link" class="ml-2 w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Documentaire -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-amber-600 flex items-center justify-center">
+                        <i data-feather="film" class="text-white w-16 h-16"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 gold-text">Documentaire "Mines du Congo"</h3>
+                        <p class="text-gray-600 mb-4">Voyage au cœur des principales exploitations minières du Congo-Brazzaville.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Vidéo - 15 min</span>
+                            <button class="gold-text font-medium hover:text-amber-700 flex items-center">
+                                Regarder <i data-feather="play" class="ml-2 w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section détaillée Rapports ITIE -->
+            <div class="bg-amber-50 rounded-xl p-8 mb-12" data-aos="fade-up">
+                <h3 class="text-2xl font-bold gold-text mb-6 text-center">Rapports Initiative pour la Transparence dans les Industries Extractives (ITIE)</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg p-6 text-center">
+                        <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="file-text" class="gold-text w-8 h-8"></i>
+                        </div>
+                        <h4 class="font-bold gold-text mb-2">Rapport ITIE 2022</h4>
+                        <p class="text-gray-600 text-sm mb-4">Rapport de conciliation complet</p>
+                        <button class="gold-text text-sm font-medium hover:text-amber-700">Télécharger</button>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 text-center">
+                        <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="bar-chart-2" class="gold-text w-8 h-8"></i>
+                        </div>
+                        <h4 class="font-bold gold-text mb-2">Rapport ITIE 2021</h4>
+                        <p class="text-gray-600 text-sm mb-4">Données et analyses</p>
+                        <button class="gold-text text-sm font-medium hover:text-amber-700">Télécharger</button>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 text-center">
+                        <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="trending-up" class="gold-text w-8 h-8"></i>
+                        </div>
+                        <h4 class="font-bold gold-text mb-2">Rapport ITIE 2020</h4>
+                        <p class="text-gray-600 text-sm mb-4">Premier rapport de mise en œuvre</p>
+                        <button class="gold-text text-sm font-medium hover:text-amber-700">Télécharger</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-100 rounded-xl p-8" data-aos="fade-up">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 mb-6 md:mb-0 flex justify-center">
+                        <i data-feather="database" class="gold-text w-24 h-24"></i>
+                    </div>
+                    <div class="md:w-2/3 md:pl-8">
+                        <h3 class="text-2xl font-bold gold-text mb-4">Base de Données Géologiques</h3>
+                        <p class="text-gray-600 mb-6">Accédez à notre base de données complète contenant les informations géologiques, les cartes des ressources minières, les rapports d'exploration et les études techniques réalisées sur l'ensemble du territoire congolais.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <button class="gold-gradient text-gray-900 font-bold py-3 px-6 rounded-lg transition hover:opacity-90 flex items-center">
+                                Accéder à la base de données <i data-feather="database" class="ml-2 w-5 h-5"></i>
+                            </button>
+                            <button class="border-2 border-amber-500 gold-text hover:gold-gradient hover:text-gray-900 font-bold py-3 px-6 rounded-lg transition">
+                                Catalogue des publications
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Séminaires & Conférences Section -->
+    <section id="seminaires" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center gold-text mb-4" data-aos="fade-up">Séminaires & Conférences</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto" data-aos="fade-up">Événements professionnels et scientifiques sur le secteur minier</p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Événement à venir -->
+                <div class="bg-amber-50 rounded-xl p-8" data-aos="fade-right">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-amber-500 text-white p-3 rounded-lg mr-4 text-center">
+                            <div class="text-2xl font-bold">15</div>
+                            <div class="text-sm">NOV</div>
+                        </div>
+                        <div>
+                            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">À venir</span>
+                            <div class="text-sm text-gray-600">2024</div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold gold-text mb-3">Conférence Internationale sur les Mines Durables</h3>
+                    <p class="text-gray-600 mb-4">Événement annuel réunissant les acteurs du secteur minier pour discuter des meilleures pratiques en matière d'exploitation minière durable.</p>
+                    <div class="flex items-center text-gray-600 mb-4">
+                        <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
+                        <span>Hôtel Radisson Blu, Brazzaville</span>
+                    </div>
+                    <button class="gold-gradient text-gray-900 font-bold py-2 px-6 rounded-lg transition hover:opacity-90">
+                        S'inscrire
+                    </button>
+                </div>
+                
+                <!-- Événement passé -->
+                <div class="bg-gray-50 rounded-xl p-8" data-aos="fade-left">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-gray-400 text-white p-3 rounded-lg mr-4 text-center">
+                            <div class="text-2xl font-bold">28</div>
+                            <div class="text-sm">SEP</div>
+                        </div>
+                        <div>
+                            <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Terminé</span>
+                            <div class="text-sm text-gray-600">2023</div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold gold-text mb-3">Séminaire sur la Digitalisation des Titres Miniers</h3>
+                    <p class="text-gray-600 mb-4">Présentation du nouveau système numérique de gestion des titres miniers et formation des utilisateurs.</p>
+                    <div class="flex items-center text-gray-600 mb-4">
+                        <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
+                        <span>Ministère des Industries Minières, Brazzaville</span>
+                    </div>
+                    <button class="border-2 border-amber-500 gold-text hover:gold-gradient hover:text-gray-900 font-bold py-2 px-6 rounded-lg transition">
+                        Voir les présentations
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Liste des événements -->
+            <div class="bg-gray-100 rounded-xl p-8" data-aos="fade-up">
+                <h3 class="text-2xl font-bold gold-text mb-6">Calendrier des Événements</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b-2 border-amber-500">
+                                <th class="text-left py-3 font-bold gold-text">Date</th>
+                                <th class="text-left py-3 font-bold gold-text">Événement</th>
+                                <th class="text-left py-3 font-bold gold-text">Lieu</th>
+                                <th class="text-left py-3 font-bold gold-text">Statut</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-4">15 Nov 2024</td>
+                                <td class="py-4 font-medium">Conférence Internationale sur les Mines Durables</td>
+                                <td class="py-4">Brazzaville</td>
+                                <td class="py-4"><span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Inscriptions ouvertes</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-4">10 Déc 2024</td>
+                                <td class="py-4 font-medium">Atelier sur le Processus de Kimberley</td>
+                                <td class="py-4">Brazzaville</td>
+                                <td class="py-4"><span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Bientôt</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-4">28 Sep 2023</td>
+                                <td class="py-4 font-medium">Séminaire Digitalisation des Titres Miniers</td>
+                                <td class="py-4">Brazzaville</td>
+                                <td class="py-4"><span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Terminé</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-4">15 Juin 2023</td>
+                                <td class="py-4 font-medium">Forum des Investisseurs Miniers</td>
+                                <td class="py-4">Pointe-Noire</td>
+                                <td class="py-4"><span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Terminé</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-16 light-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center gold-text mb-4" data-aos="fade-up">Actualités & Blog</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto" data-aos="fade-up">Restez informés sur les dernières nouvelles du secteur minier congolais</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+                    <img src="http://static.photos/office/640x360/3" alt="Article 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-500">15 Juin 2023</span>
+                            <span class="text-sm bg-amber-100 text-amber-800 px-2 py-1 rounded">Réglementation</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 gold-text">Nouveau Code Minier adopté</h3>
+                        <p class="text-gray-600 mb-4">Le Parlement a adopté le nouveau code minier visant à moderniser le cadre légal du secteur...</p>
+                        <a href="#" class="gold-text font-medium hover:text-amber-700 flex items-center">
+                            Lire l'article <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Article 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+                    <img src="http://static.photos/people/640x360/4" alt="Article 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-500">2 Juin 2023</span>
+                            <span class="text-sm bg-green-100 text-green-800 px-2 py-1 rounded">Formation</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 gold-text">Formation des artisans miniers</h3>
+                        <p class="text-gray-600 mb-4">Le ministère lance un programme de formation pour améliorer les pratiques des exploitants artisanaux...</p>
+                        <a href="#" class="gold-text font-medium hover:text-amber-700 flex items-center">
+                            Lire l'article <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Article 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+                    <img src="http://static.photos/technology/640x360/5" alt="Article 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-500">20 Mai 2023</span>
+                            <span class="text-sm bg-yellow-100 text-yellow-800 px-2 py-1 rounded">Technologie</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 gold-text">Digitalisation des titres miniers</h3>
+                        <p class="text-gray-600 mb-4">Mise en place d'un système numérique pour la gestion et le suivi des titres miniers...</p>
+                        <a href="#" class="gold-text font-medium hover:text-amber-700 flex items-center">
+                            Lire l'article <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center" data-aos="fade-up">
+                <button class="border-2 border-amber-500 gold-text hover:gold-gradient hover:text-gray-900 font-bold py-3 px-8 rounded-lg transition">
+                    Voir toutes les actualités
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center gold-text mb-16" data-aos="fade-up">Questions Fréquentes</h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-6 bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                        <h3 class="text-lg font-bold text-left gold-text">Comment obtenir une autorisation d'exploitation artisanale ?</h3>
+                        <i data-feather="chevron-down" class="gold-text w-6 h-6 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-600">Pour obtenir une autorisation d'exploitation artisanale, vous devez soumettre une demande accompagnée des pièces suivantes : carte d'identité, certificat de résidence, plan de localisation du site, engagement de respecter les réglementations environnementales. Le dossier complet doit être déposé auprès de la Direction Départementale des Mines de votre région.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="mb-6 bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                        <h3 class="text-lg font-bold text-left gold-text">Quels sont les droits et taxes applicables aux titres miniers ?</h3>
+                        <i data-feather="chevron-down" class="gold-text w-6 h-6 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-600">Les droits et taxes varient selon le type de titre minier. Ils comprennent généralement : droit de dossier, redevance superficiaire, taxe ad valorem sur la production, impôt sur les bénéfices industriels et commerciaux. Les taux exacts sont précisés dans le Code Minier et son règlement d'application. Un simulateur en ligne est disponible sur notre portail pour estimer ces coûts.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="mb-6 bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                        <h3 class="text-lg font-bold text-left gold-text">Quelle est la durée de validité d'un permis d'exploitation ?</h3>
+                        <i data-feather="chevron-down" class="gold-text w-6 h-6 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-600">La durée initiale d'un permis d'exploitation industrielle est de 25 ans, renouvelable par périodes de 10 ans. Pour les petites mines, la durée initiale est de 10 ans renouvelable. Les autorisations artisanales sont valables pour 3 ans renouvelables. Le renouvellement est soumis à l'évaluation des activités passées et au respect des engagements.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="mb-6 bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                        <h3 class="text-lg font-bold text-left gold-text">Comment participer aux appels d'offres miniers ?</h3>
+                        <i data-feather="chevron-down" class="gold-text w-6 h-6 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-gray-600">Les appels d'offres sont publiés sur notre site officiel et dans un journal d'annonces légales. Les entreprises intéressées doivent constituer un dossier technique et financier selon les termes de référence, et le déposer avant la date limite. Les sociétés étrangères doivent s'associer à un partenaire local détenant au moins 10% du capital selon la loi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 dark-bg text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4" data-aos="fade-up">Contactez-nous</h2>
+            <p class="text-center text-amber-200 mb-16 max-w-2xl mx-auto" data-aos="fade-up">Pour toute question ou demande d'information complémentaire</p>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2 font-medium">Nom complet</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-amber-900 border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2 font-medium">Adresse email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-amber-900 border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div>
+                            <label for="subject" class="block mb-2 font-medium">Sujet</label>
+                            <select id="subject" class="w-full px-4 py-3 rounded-lg bg-amber-900 border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="demande">Demande d'information</option>
+                                <option value="reclamation">Réclamation</option>
+                                <option value="partenariat">Proposition de partenariat</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2 font-medium">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg bg-amber-900 border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        </div>
+                        <div>
+                            <label for="file" class="block mb-2 font-medium">Pièce jointe (optionnel)</label>
+                            <input type="file" id="file" class="w-full px-4 py-3 rounded-lg bg-amber-900 border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <button type="submit" class="gold-gradient text-gray-900 font-bold py-3 px-6 rounded-lg transition w-full hover:opacity-90">
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <div class="bg-amber-900 rounded-xl p-8 h-full">
+                        <h3 class="text-xl font-bold mb-6">Coordonnées</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-amber-800 p-3 rounded-full mr-4">
+                                    <i data-feather="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Adresse</h4>
+                                    <p class="text-amber-200">Ministère des Industries Minières et de la Géologie<br>
+                                    Forêt de la Patte d'Oies, à côté de l'hôpital Blanche Gomez<br>
+                                    Brazzaville, République du Congo</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-amber-800 p-3 rounded-full mr-4">
+                                    <i data-feather="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Téléphone</h4>
+                                    <p class="text-amber-200">+242 06 937 48 76</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-amber-800 p-3 rounded-full mr-4">
+                                    <i data-feather="mail" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email</h4>
+                                    <p class="text-amber-200">contact@mines-congo.cg<br>
+                                    info@mines-congo.cg</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-amber-800 p-3 rounded-full mr-4">
+                                    <i data-feather="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Heures d'ouverture</h4>
+                                    <p class="text-amber-200">Lundi à Vendredi: 7h30 - 15h30<br>
+                                    Samedi: 8h00 - 12h00</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Suivez-nous</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-amber-800 hover:bg-amber-700 p-3 rounded-full transition">
+                                    <i data-feather="facebook" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="bg-amber-800 hover:bg-amber-700 p-3 rounded-full transition">
+                                    <i data-feather="twitter" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="bg-amber-800 hover:bg-amber-700 p-3 rounded-full transition">
+                                    <i data-feather="linkedin" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="bg-amber-800 hover:bg-amber-700 p-3 rounded-full transition">
+                                    <i data-feather="youtube" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="darker-bg text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="http://static.photos/black/200x200/10" alt="Logo Ministère" class="h-12 mb-4">
+                    <p class="text-amber-300">Promouvoir une exploitation minière responsable et durable au service du développement économique du Congo-Brazzaville.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Liens rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-amber-300 hover:text-white transition">Accueil</a></li>
+                        <li><a href="#apropos" class="text-amber-300 hover:text-white transition">À propos</a></li>
+                        <li><a href="#services" class="text-amber-300 hover:text-white transition">Services</a></li>
+                        <li><a href="#kimberley" class="text-amber-300 hover:text-white transition">Processus Kimberley</a></li>
+                        <li><a href="#digitalisation" class="text-amber-300 hover:text-white transition">Digitalisation</a></li>
+                        <li><a href="#projets" class="text-amber-300 hover:text-white transition">Projets en cours</a></li>
+                        <li><a href="#statistiques" class="text-amber-300 hover:text-white transition">Statistiques</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Documents</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-amber-300 hover:text-white transition">Code Minier</a></li>
+                        <li><a href="#mediatheque" class="text-amber-300 hover:text-white transition">Rapport Annuel 2022</a></li>
+                        <li><a href="#mediatheque" class="text-amber-300 hover:text-white transition">Rapports ITIE</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-white transition">Guides des procédures</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-white transition">Publications</a></li>
+                        <li><a href="#statistiques" class="text-amber-300 hover:text-white transition">Statistiques minières</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-amber-300 mb-4">Abonnez-vous pour recevoir nos dernières actualités et informations.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Votre email" class="px-4 py-2 rounded-l-lg text-gray-900 focus:outline-none w-full">
+                        <button class="gold-gradient text-gray-900 font-bold px-4 py-2 rounded-r-lg transition hover:opacity-90">
+                            <i data-feather="send" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-amber-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-amber-400">© 2023 Ministère des Industries Minières et de la Géologie - Tous droits réservés</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-amber-400 hover:text-white transition">Mentions légales</a>
+                    <a href="#" class="text-amber-400 hover:text-white transition">Politique de confidentialité</a>
+                    <a href="#" class="text-amber-400 hover:text-white transition">Plan du site</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Forms -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4" id="formModal">
+        <div class="bg-white rounded-xl max-w-2xl w-full max-h-screen overflow-y-auto">
+            <div class="sticky top-0 bg-white p-4 border-b flex justify-between items-center">
+                <h3 class="text-xl font-bold gold-text" id="modalTitle">Formulaire de demande</h3>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <form id="miningForm">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="formName" class="block mb-2 font-medium text-gray-700">Nom complet</label>
+                            <input type="text" id="formName" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div>
+                            <label for="formEmail" class="block mb-2 font-medium text-gray-700">Email</label>
+                            <input type="email" id="formEmail" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div>
+                            <label for="formPhone" class="block mb-2 font-medium text-gray-700">Téléphone</label>
+                            <input type="tel" id="formPhone" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div>
+                            <label for="formId" class="block mb-2 font-medium text-gray-700">Numéro CNI/Passeport</label>
+                            <input type="text" id="formId" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="formAddress" class="block mb-2 font-medium text-gray-700">Adresse</label>
+                            <input type="text" id="formAddress" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="formLocation" class="block mb-2 font-medium text-gray-700">Localisation du site</label>
+                            <textarea id="formLocation" rows="2" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="formActivity" class="block mb-2 font-medium text-gray-700">Description de l'activité</label>
+                            <textarea id="formActivity" rows="3" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="formEquipment" class="block mb-2 font-medium text-gray-700">Moyens techniques et équipements</label>
+                            <textarea id="formEquipment" rows="2" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block mb-2 font-medium text-gray-700">Pièces jointes requises</label>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="formCni" class="mr-2">
+                                    <label for="formCni">Copie CNI/Passeport</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="formPlan" class="mr-2">
+                                    <label for="formPlan">Plan de localisation</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="formEngagement" class="mr-2">
+                                    <label for="formEngagement">Engagement environnemental</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="formRegistre" class="mr-2">
+                                    <label for="formRegistre">Extrait de registre de commerce (pour entreprises)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="formFiles" class="block mb-2 font-medium text-gray-700">Téléverser les documents</label>
+                            <input type="file" id="formFiles" multiple class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                    </div>
+                    <div class="mt-8 flex justify-end space-x-4">
+                        <button type="button" onclick="closeModal()" class="border border-gray-300 text-gray-700 font-medium py-2 px-6 rounded-lg hover:bg-gray-100 transition">
+                            Annuler
+                        </button>
+                        <button type="submit" class="gold-gradient text-gray-900 font-bold py-2 px-6 rounded-lg transition hover:opacity-90">
+                            Soumettre la demande
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                feather.replace();
+            } else {
+                icon.setAttribute('data-feather', 'x');
+                feather.replace();
+            }
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                
+                if (content.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Carrousel Header
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.carousel-indicator');
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.add('hidden'));
+            indicators.forEach(indicator => indicator.classList.remove('bg-opacity-100'));
+            
+            slides[n].classList.remove('hidden');
+            indicators[n].classList.add('bg-opacity-100');
+            currentSlide = n;
+        }
+
+        function nextSlide() {
+            let next = currentSlide + 1;
+            if (next >= slides.length) next = 0;
+            showSlide(next);
+        }
+
+        // Auto-advance carousel
+        setInterval(nextSlide, 5000);
+
+        // Indicator clicks
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => showSlide(index));
+        });
+
+        // Form modal functions
+        function openModal(formType) {
+            const modal = document.getElementById('formModal');
+            const title = document.getElementById('modalTitle');
+            
+            // Set modal title based on form type
+            switch(formType) {
+                case 'artisanale':
+                    title.textContent = "Demande d'Autorisation d'Exploitation Artisanale";
+                    break;
+                case 'carriere':
+                    title.textContent = "Demande d'Autorisation de Carrière";
+                    break;
+                case 'recherche':
+                    title.textContent = "Demande de Permis de Recherche";
+                    break;
+                case 'petite-mine':
+                    title.textContent = "Demande de Permis d'Exploitation de Petite Mine";
+                    break;
+                case 'industrielle':
+                    title.textContent = "Demande de Permis d'Exploitation Industrielle";
+                    break;
+                case 'speciale':
+                    title.textContent = "Demande d'Autorisation Spéciale";
+                    break;
+                default:
+                    title.textContent = "Formulaire de demande";
+            }
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('formModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('formModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Form submission
+        document.getElementById('miningForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Votre demande a été soumise avec succès. Vous recevrez un accusé de réception par email.');
+            closeModal();
+            this.reset();
+        });
+
+        // Gestion des téléchargements de documents
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('Télécharger') || button.textContent.includes('Download')) {
+                button.addEventListener('click', function(e) {
+                    if (!this.getAttribute('href')) {
+                        e.preventDefault();
+                        // Simuler un téléchargement
+                        const fileName = this.closest('.bg-white, .bg-gray-50').querySelector('h3, h4').textContent;
+                        alert(`Téléchargement simulé: ${fileName}\n\nEn production, ce bouton téléchargera le document réel.`);
+                    }
+                });
+            }
+        });
+
+        // Gestion des menus déroulants mobiles
+document.querySelectorAll('.mobile-dropdown-toggle').forEach(button => {
+    button.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        const icon = this.querySelector('i');
+        
+            // Fermer tous les autres dropdowns
+            document.querySelectorAll('.mobile-dropdown-content').forEach(otherContent => {
+                if (otherContent !== content && !otherContent.classList.contains('hidden')) {
+                    otherContent.classList.add('hidden');
+                    const otherIcon = otherContent.previousElementSibling.querySelector('i');
+                    otherIcon.style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Basculer le dropdown actuel
+            content.classList.toggle('hidden');
+            
+            if (content.classList.contains('hidden')) {
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                icon.style.transform = 'rotate(180deg)';
+            }
+        });
+    });
+
+    // Fermer les dropdowns mobiles quand on clique ailleurs
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.mobile-dropdown')) {
+            document.querySelectorAll('.mobile-dropdown-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            document.querySelectorAll('.mobile-dropdown-toggle i').forEach(icon => {
+                icon.style.transform = 'rotate(0deg)';
+            });
+        }
+    });
+
+        // Animation des statistiques
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start);
+                }
+            }, 16);
+        }
+
+        // Démarrer l'animation des compteurs quand la section devient visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.text-3xl.font-bold');
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.textContent);
+                        if (!isNaN(target)) {
+                            animateCounter(counter, target);
+                        }
+                    });
+                }
+            });
+        });
+
+        // Observer la section statistiques
+        const statsSection = document.querySelector('#statistiques');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+    </script>
+</body>
+</html>
