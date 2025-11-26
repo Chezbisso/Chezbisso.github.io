@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biographie de Pierre Oba - Ministre des Industries Minières et de la Géologie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #2c2416 0%, #4a3c24 50%, #7a613c 100%);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #f7ef8a 0%, #d4af37 50%, #b8941f 100%);
+        }
+        .gold-text {
+            color: #d4af37;
+        }
+        .dark-bg {
+            background-color: #1a1611;
+        }
+        .darker-bg {
+            background-color: #14110d;
+        }
+        .light-bg {
+            background-color: #f8f6f0;
+        }
+        
+        /* Styles pour la biographie */
+        .bio-section {
+            background: linear-gradient(135deg, #f8f6f0 0%, #ffffff 50%, #f8f6f0 100%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: #d4af37;
+            border-radius: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 1.5rem;
+            bottom: -2rem;
+            width: 2px;
+            background: #d4af37;
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .book-cover {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .book-cover:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .timeline-item {
+                padding-left: 1.5rem;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/Coat_of_arms_of_the_Republic_of_the_Congo.svg" alt="Logo Ministère" class="h-12 mr-3">
+                <span class="text-xl font-bold gold-text">Ministre des Industries Minières et de la Géologie</span>
+            </div>
+            <a href="version3/" class="gold-gradient text-gray-900 px-4 py-2 rounded-md hover:opacity-90 transition font-medium flex items-center">
+                <i data-feather="arrow-left" class="mr-2 w-4 h-4"></i> Retour
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section Biographie -->
+    <section class="hero-gradient pt-32 pb-20 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center" data-aos="fade-right">
+                    <div class="relative">
+                        <img src="images/pierre-oba.jpg" alt="Pierre Oba" class="w-64 h-80 md:w-80 md:h-96 object-cover rounded-xl shadow-2xl">
+                        <div class="absolute -bottom-4 -right-4 bg-amber-500 text-white p-4 rounded-lg shadow-lg">
+                            <p class="font-bold text-lg">Ministre d'État</p>
+                            <p class="text-sm">Industries Minières et Géologie</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12" data-aos="fade-left">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 hero-title">Général de Division <br>Pierre Oba</h1>
+                    <p class="text-xl mb-6">Ministre d'État, Ministre des Industries Minières et de la Géologie de la République du Congo</p>
+                    <div class="flex flex-wrap gap-4 mb-6">
+                        <div class="bg-amber-500 bg-opacity-20 px-4 py-2 rounded-lg">
+                            <p class="text-sm text-amber-200">Né le 17 juillet 1953</p>
+                        </div>
+                        <div class="bg-amber-500 bg-opacity-20 px-4 py-2 rounded-lg">
+                            <p class="text-sm text-amber-200">Ollèmé, Plateaux</p>
+                        </div>
+                        <div class="bg-amber-500 bg-opacity-20 px-4 py-2 rounded-lg">
+                            <p class="text-sm text-amber-200">Général de Division</p>
+                        </div>
+                    </div>
+                    <p class="text-lg opacity-90">Homme d'État, stratège militaire et architecte de la politique minière congolaise, œuvrant pour le développement économique national.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenu Biographie -->
+    <section class="py-16 bio-section">
+        <div class="container mx-auto px-6">
+            <!-- Identité et Origines -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold gold-text mb-6 section-title">Identité et Origines</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            Le Général de Division <strong>Pierre Oba</strong>, Ministre d'État, Ministre des Industries Minières et de la Géologie, est né le <strong class="gold-text">17 juillet 1953</strong> à <strong>Ollèmé</strong>, dans le district d'Ollombo, département des Plateaux, en République du Congo.
+                        </p>
+                        <div class="bg-amber-50 p-4 rounded-lg border-l-4 border-amber-500">
+                            <p class="text-amber-800"><strong>Origines :</strong> Fils des Plateaux, une région connue pour sa riche histoire et ses traditions ancestrales.</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="images/Carte-du-departement-des-Plateaux-republique-du-Congo-2018.jpg" alt="Région d'Ollèmé" class="rounded-lg shadow-md w-full max-w-md">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formation -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold gold-text mb-6 section-title">Formation</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <div class="flex items-start mb-6">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i data-feather="book-open" class="gold-text w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold gold-text mb-2">Études Universitaires</h3>
+                                <p class="text-gray-700">Il a suivi des <strong>études de droit</strong> à l'Université Marien-Ngouabi, établissant des bases solides en sciences juridiques et politiques.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-start mb-6">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i data-feather="award" class="gold-text w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold gold-text mb-2">Formation Militaire</h3>
+                                <p class="text-gray-700">Poursuite d'une <strong>formation militaire</strong>, notamment à l'étranger, lui permettant d'intégrer les plus hautes sphères de la sécurité nationale.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Débuts et Ascension -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold gold-text mb-6 section-title">Débuts et Ascension</h2>
+                <div class="timeline-container">
+                    <div class="timeline-item" data-aos="fade-right">
+                        <h3 class="text-xl font-bold gold-text mb-2">1979 – 1992</h3>
+                        <p class="text-gray-700 mb-2 font-semibold">Directeur de la Sécurité rapprochée du Président Denis Sassou N'Guesso</p>
+                        <p class="text-gray-600">Responsable de la protection du Chef de l'État, une fonction exigeant une confiance absolue et des compétences exceptionnelles en sécurité.</p>
+                    </div>
+                    
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                        <h3 class="text-xl font-bold gold-text mb-2">1984 – 1992</h3>
+                        <p class="text-gray-700 mb-2 font-semibold">Directeur Général de la Police Nationale</p>
+                        <p class="text-gray-600">Période durant laquelle il participe activement à la modernisation des services de sécurité et au renforcement des institutions policières.</p>
+                    </div>
+                    
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+                        <h3 class="text-xl font-bold gold-text mb-2">Membre du Comité Central</h3>
+                        <p class="text-gray-700 mb-2 font-semibold">Parti Congolais du Travail</p>
+                        <p class="text-gray-600">Parallèlement à ses fonctions sécuritaires, il devient membre du Comité Central du PCT, renforçant son influence politique et son engagement partisan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Responsabilités Ministérielles -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold gold-text mb-6 section-title">Responsabilités Ministérielles</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="bg-amber-50 p-6 rounded-xl border-l-4 border-amber-500">
+                            <h3 class="text-xl font-bold gold-text mb-3">1997 – 2005</h3>
+                            <p class="text-gray-700 font-semibold mb-2">Ministre de l'Intérieur</p>
+                            <p class="text-gray-600">Chargé de la sécurité, de l'administration territoriale et de la stabilisation post-crise, contribuant à la reconstruction nationale.</p>
+                        </div>
+                        
+                        <div class="bg-amber-50 p-6 rounded-xl border-l-4 border-amber-500">
+                            <h3 class="text-xl font-bold gold-text mb-3">Depuis mai 2021</h3>
+                            <p class="text-gray-700 font-semibold mb-2">Ministre d'État</p>
+                            <p class="text-gray-600">Ministre des Industries Minières et de la Géologie, chargé de la coordination globale des politiques liées au secteur minier.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-amber-50 p-6 rounded-xl border-l-4 border-amber-500 h-full">
+                        <h3 class="text-xl font-bold gold-text mb-3">Depuis le 7 janvier 2005</h3>
+                        <p class="text-gray-700 font-semibold mb-2">Ministre des Mines, des Industries Minières et de la Géologie</p>
+                        <p class="text-gray-600 mb-4">Mission au cœur du développement stratégique et économique du pays. Dans ses fonctions, il œuvre notamment pour :</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center">
+                                <i data-feather="check" class="gold-text w-4 h-4 mr-2"></i>
+                                La mise à jour du cadre légal du secteur minier
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="gold-text w-4 h-4 mr-2"></i>
+                                La valorisation des ressources nationales
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="gold-text w-4 h-4 mr-2"></i>
+                                L'attraction des investissements miniers
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="gold-text w-4 h-4 mr-2"></i>
+                                Le développement durable du secteur
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Auteur et Contribution Historique -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold gold-text mb-6 section-title">Auteur et Contribution Historique</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold gold-text mb-4">« Le Protocole de Brazzaville, une victoire congolaise mal connue »</h3>
+                            <p class="text-gray-700 mb-4">
+                                Dans cet ouvrage majeur, Pierre Oba revient sur le processus diplomatique ayant contribué à des avancées historiques majeures en Afrique australe.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-amber-50 p-6 rounded-lg">
+                            <h4 class="text-lg font-bold gold-text mb-3">Contributions historiques majeures :</h4>
+                            <ul class="text-gray-700 space-y-2">
+                                <li class="flex items-start">
+                                    <i data-feather="star" class="gold-text w-4 h-4 mr-2 mt-1 flex-shrink-0"></i>
+                                    <span>L'éradication de l'apartheid en Afrique du Sud</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="star" class="gold-text w-4 h-4 mr-2 mt-1 flex-shrink-0"></i>
+                                    <span>La fin de la guerre au sud de l'Angola et le retrait des troupes cubaines</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="star" class="gold-text w-4 h-4 mr-2 mt-1 flex-shrink-0"></i>
+                                    <span>L'indépendance de la Namibie</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="star" class="gold-text w-4 h-4 mr-2 mt-1 flex-shrink-0"></i>
+                                    <span>La libération de Nelson Mandela</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-center">
+                        <div class="book-cover bg-amber-100 p-6 rounded-lg max-w-xs">
+                            <div class="bg-white p-4 rounded shadow-inner text-center mb-4">
+                                <h4 class="font-bold text-lg gold-text">Le Protocole de Brazzaville</h4>
+                                <p class="text-sm text-gray-600">Une victoire congolaise mal connue</p>
+                            </div>
+                            <p class="text-center text-sm text-gray-700">Par le Général de Division<br><strong>Pierre Oba</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+                    <p class="text-gray-700 italic">
+                        "Cet ouvrage met en lumière le rôle crucial du Congo dans la résolution des conflits régionaux et la consolidation de la paix en Afrique australe."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Vie Privée -->
+            <!-- <div class="bg-white rounded-2xl shadow-lg p-8" data-aos="fade-up">
+                <h2 class="text-3xl font-bold gold-text mb-6 section-title">Vie Privée</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            Pierre Oba est <strong>marié</strong> et <strong>père de famille</strong>, connu pour sa discrétion et son attachement aux valeurs familiales.
+                        </p>
+                        <div class="bg-amber-50 p-4 rounded-lg">
+                            <p class="text-amber-800 text-center">
+                                <i data-feather="heart" class="w-6 h-6 gold-text mx-auto mb-2"></i><br>
+                                Homme de principes, alliant engagement public et vie familiale équilibrée
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-amber-100 p-8 rounded-full">
+                            <i data-feather="users" class="w-24 h-24 gold-text"></i>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="darker-bg text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="http://static.photos/black/200x200/10" alt="Logo Ministère" class="h-12 mb-4">
+                    <p class="text-amber-300">Promouvoir une exploitation minière responsable et durable au service du développement économique du Congo-Brazzaville.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Liens rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-amber-300 hover:text-white transition">Accueil</a></li>
+                        <li><a href="#apropos" class="text-amber-300 hover:text-white transition">À propos</a></li>
+                        <li><a href="#services" class="text-amber-300 hover:text-white transition">Services</a></li>
+                        <li><a href="#kimberley" class="text-amber-300 hover:text-white transition">Processus Kimberley</a></li>
+                        <li><a href="#digitalisation" class="text-amber-300 hover:text-white transition">Digitalisation</a></li>
+                        <li><a href="#projets" class="text-amber-300 hover:text-white transition">Projets en cours</a></li>
+                        <li><a href="#statistiques" class="text-amber-300 hover:text-white transition">Statistiques</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Documents</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-amber-300 hover:text-white transition">Code Minier</a></li>
+                        <li><a href="#mediatheque" class="text-amber-300 hover:text-white transition">Rapport Annuel 2022</a></li>
+                        <li><a href="#mediatheque" class="text-amber-300 hover:text-white transition">Rapports ITIE</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-white transition">Guides des procédures</a></li>
+                        <li><a href="#" class="text-amber-300 hover:text-white transition">Publications</a></li>
+                        <li><a href="#statistiques" class="text-amber-300 hover:text-white transition">Statistiques minières</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-amber-300 mb-4">Abonnez-vous pour recevoir nos dernières actualités et informations.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Votre email" class="px-4 py-2 rounded-l-lg text-gray-900 focus:outline-none w-full">
+                        <button class="gold-gradient text-gray-900 font-bold px-4 py-2 rounded-r-lg transition hover:opacity-90">
+                            <i data-feather="send" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-amber-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-amber-400">© 2023 Ministère des Industries Minières et de la Géologie - Tous droits réservés</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-amber-400 hover:text-white transition">Mentions légales</a>
+                    <a href="#" class="text-amber-400 hover:text-white transition">Politique de confidentialité</a>
+                    <a href="#" class="text-amber-400 hover:text-white transition">Plan du site</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+    </script>
+</body>
+</html>
